@@ -70,6 +70,8 @@
 - CoAP
 - MQTT
 - OSC
+- Homekit Automation Protocol (Apple)
+- Thread (Google / Nest)
 - GRPC
 - Protobufs
 - Cap'n Proto
