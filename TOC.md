@@ -67,13 +67,17 @@
 - WebSockets
 - WebRTC
 - QUIC
-- XMPP
-- CoAP
 - MQTT / MQTT-SN
+- CoAP
+- XMPP
+- Matrix
 - OMA LWM2M
 - OSC
+- DMX
+- RTP / RTSP / RTCP
 - Homekit Automation Protocol (Apple)
 - Thread (Google / Nest)
+- Weave
 - Noise / WireGuard
 - GRPC
 - Protobufs
