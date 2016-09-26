@@ -64,14 +64,17 @@
 - TLS / DTLS
 - HTTP/1
 - HTTP/2
-- WebSocket
+- WebSockets
+- WebRTC
 - QUIC
 - XMPP
 - CoAP
-- MQTT
+- MQTT / MQTT-SN
+- OMA LWM2M
 - OSC
 - Homekit Automation Protocol (Apple)
 - Thread (Google / Nest)
+- Noise / WireGuard
 - GRPC
 - Protobufs
 - Cap'n Proto
