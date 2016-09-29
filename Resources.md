@@ -10,6 +10,15 @@ https://github.com/hackndev/zinc
 
 [Easier Rust Development on the PJRC Teensy 3](http://jamesmunns.com/update/2016/09/26/teensy3-rs.html)
 
+### OpenWRT
+
+[OpenWRT](https://openwrt.org)
+
+OpenWrt is described as a Linux distribution for embedded devices.
+Instead of trying to create a single, static firmware, OpenWrt provides a fully writable filesystem with package management. This frees you from the application selection and configuration provided by the vendor and allows you to customize the device through the use of packages to suit any application. For developer, OpenWrt is the framework to build an application without having to build a complete firmware around it; for users this means the ability for full customization, to use the device in ways never envisioned.
+
+https://github.com/japaric/rust-on-openwrt
+
 ## Operating Systems
 
 https://github.com/helena-project/tock
@@ -36,6 +45,8 @@ The most common layer 2 and layer 3 protocols, Ethernet and IP respectively, pal
 The purpose of these posts and the resulting software is purely educational - to learn network and system programming at a deeper level.
 
 ## Protocols
+
+[List of Automation Protocols](https://en.wikipedia.org/wiki/List_of_automation_protocols)
 
 
 ### MQTT
@@ -81,6 +92,24 @@ MQTT-SN is designed to be as close as possible to MQTT, but is adapted to the pe
 
 A fast and stable Constrained Application Protocol(CoAP) library implemented in Rust.
 
+### MIDI
+
+[MIDI](https://en.wikipedia.org/wiki/MIDI)
+
+MIDI (/ˈmɪdi/; short for Musical Instrument Digital Interface) is a technical standard that describes a protocol, digital interface and connectors and allows a wide variety of electronic musical instruments, computers and other related devices to connect and communicate with one another.[1] A single MIDI link can carry up to sixteen channels of information, each of which can be routed to a separate device.
+
+[Summary of MIDI Messages](https://www.midi.org/specifications/item/table-1-summary-of-midi-message)
+
+
+
+### Firmata
+
+[firmata/protocol](https://github.com/firmata/protocol)
+
+Firmata is a protocol for communicating with microcontrollers from software on a computer (or smartphone/tablet, etc). The protocol can be implemented in firmware on any microcontroller architecture as well as software on any computer software package (see list of client libraries below).
+
+Firmata is based on the midi message format in that commands bytes are 8 bits and data bytes are 7 bits. For example the midi Channel Pressure (Command: 0xD0) message is 2 bytes long, in Firmata the Command 0xD0 is used to enable reporting for a digital port (collection of 8 pins). Both the midi and Firmata versions are 2 bytes long, but the meaning is obviously different. In Firmata, the number of bytes in a message must conform with the corresponding midi message. Midi System Exclusive (Sysex) messages however, can be any length and are therefore used most prominently throughout the Firmata protocol.
+
 ### OSC
 
 [The Open Sound Control 1.0 Specification](http://opensoundcontrol.org/spec-1_0)
@@ -103,6 +132,26 @@ Rust implementation of the OpenSoundControl protocol.
 [DMX512](https://en.wikipedia.org/wiki/DMX512)
 
 DMX512 (Digital Multiplex) is a standard for digital communication networks that are commonly used to control stage lighting and effects. It was originally intended as a standardized method for controlling light dimmers, which, prior to DMX512, had employed various incompatible proprietary protocols. It soon became the primary method for linking controllers (such as a lighting console) to dimmers and special effects devices such as fog machines and intelligent lights. DMX has also expanded to uses in non-theatrical interior and architectural lighting, at scales ranging from strings of Christmas lights to electronic billboards. DMX can now be used to control almost anything, reflecting its popularity in theaters and venues.
+
+### BACNet
+
+[BacNet](http://www.bacnet.org)
+
+[BacNet (Wikipedia)](https://en.wikipedia.org/wiki/BACnet)
+
+BACnet was designed to allow communication of building automation and control systems for applications such as heating, ventilating, and air-conditioning control (HVAC), lighting control, access control, and fire detection systems and their associated equipment. The BACnet protocol provides mechanisms for computerized building automation devices to exchange information, regardless of the particular building service they perform.
+
+### LonWorks
+
+[LonWorks](https://en.wikipedia.org/wiki/LonWorks)
+
+LonWorks (local operating network) is a networking platform specifically created to address the needs of control applications. The platform is built on a protocol created by Echelon Corporation for networking devices over media such as twisted pair, powerlines, fiber optics, and RF. It is used for the automation of various functions within buildings such as lighting and HVAC; see building automation.
+
+### ModBus
+
+[ModBus](https://en.wikipedia.org/wiki/Modbus#Protocol_versions)
+
+Modbus is a serial communications protocol originally published by Modicon (now Schneider Electric) in 1979 for use with its programmable logic controllers (PLCs). Simple and robust, it has since become a de facto standard communication protocol, and it is now a commonly available means of connecting industrial electronic devices.
 
 ### RTSP
 
