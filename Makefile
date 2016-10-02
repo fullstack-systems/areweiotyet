@@ -3,10 +3,12 @@ PD=pulldown-cmark
 .Phony: build view clean checkout deploy
 
 build: public public/index.html public/assets/main.css public/assets/main.js
-	cp CNAME public/
 
 public:
 	mkdir -p public/ public/assets/
+
+public/CNAME: CNAME
+	cp CNAME public/
 
 public/index.html: index.md public
 	$(PD) < index.md > public/index.html
@@ -27,4 +29,4 @@ deploy:
 	cd public && git add . && git commit -m "Deploy site"
 
 clean:
-	rm -rf public
+	rm -rf public/*
