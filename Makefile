@@ -1,11 +1,26 @@
 PD=pulldown-cmark
 
-.Phony: view
+.Phony: view clean
 
-all: index.html
+all: public/index.html public/assets/main.css public/assets/main.js
 
-index.html: index.md
-	$(PD) < index.md > index.html
+public:
+	mkdir -p public/ public/assets/
+
+public/index.html: index.md public
+	$(PD) < index.md > public/index.html
+
+public/assets/main.css: assets/main.css public
+	cp assets/main.css public/assets/
+
+public/assets/main.js: assets/main.js public
+	cp assets/main.js public/assets/
 
 view: all
-	open index.html
+	open public/index.html
+
+clean:
+	rm -f public/assets/*
+	rm -f public/index.html
+	rmdir public/assets/
+	rmdir public/
