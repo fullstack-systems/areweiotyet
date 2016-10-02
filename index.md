@@ -13,9 +13,17 @@
 
 > [Rust](https://www.rust-lang.org/en-US/) is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. 
 
+In addition to the core Rust language, compiler and tools, Rust includes
+[Cargo](http://doc.crates.io/guide.html), a dependency management and build tool,
+and [crates.io](https://crates.io), the Rust community's central package host.
+
 ## What is the Internet of Things?
 
 > The internet of things (IoT), is the internetworking of physical devices, vehicles (also referred to as "connected devices" and "smart devices"), buildings and other items embedded with electronics, software, sensors, actuators, and network connectivity that enable these objects to collect and exchange data. - [Wikipedia](https://en.wikipedia.org/wiki/Internet_of_things)
+
+For the purposes of this site, the IoT consists of several components: Devices which have processors, sensors
+and actuators, Protocols that specify how Devices communicate, and Infrastructure, which is used to build
+networked systems of these Devices.
 
 ## Why is the IoT important to the Rust Community?
 
@@ -29,6 +37,7 @@ As the IoT grows, it faces the same problems that the larger Internet is
 struggling with: providing reliable services at scale in the face of malicious actors. Rust provides
 a language and ecosystem to build the next generation of IoT devices and infrastructure using a modern
 foundation designed with these concerns in mind.
+
 
 </body>
 </html>
