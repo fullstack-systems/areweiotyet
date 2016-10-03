@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>arewiotyet.org</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/main.css">
     <script src="./assets/main.js"></script>
 </head>
 <body>
+<div class="container">
 
-# Is Rust IoT yet?
+<h1 class="hero">Is Rust IoT yet?</h1>
 
 ## What is Rust?
 
@@ -21,24 +25,23 @@ and [crates.io](https://crates.io), the Rust community's central package host.
 
 > The internet of things (IoT), is the internetworking of physical devices, vehicles (also referred to as "connected devices" and "smart devices"), buildings and other items embedded with electronics, software, sensors, actuators, and network connectivity that enable these objects to collect and exchange data. - [Wikipedia](https://en.wikipedia.org/wiki/Internet_of_things)
 
-For the purposes of this site, the IoT consists of several components: Devices which have processors, sensors
-and actuators, Protocols that specify how Devices communicate, and Infrastructure, which is used to build
-networked systems of these Devices.
+This site groups IoT components into three basic categories: **devices** which have processors, sensors
+and actuators, **protocols** that specify how devices communicate, and the **infrastructure** which 
+connects the devices with the applications that use them.
 
 ## Why is the IoT important to the Rust Community?
 
-The IoT (including devices and infrastructure) is a fast growing application domain that presents
-a huge opportunity to expand the use of Rust. It's requirements (safety and security on often resource 
-constrained networked devices) are a good match to the language and community's strengths.
+The IoT is a fast growing application domain that presents a huge opportunity to expand the use of Rust. 
+It's requirements (particularly safety and security on often resource constrained networked devices) are a good match
+for the language and community's strengths.
 
 ## Why is Rust important to the IoT Community?
 
-As the IoT grows, it faces the same problems that the larger Internet is
-struggling with: providing reliable services at scale in the face of malicious actors. Rust provides
-a language and ecosystem to build the next generation of IoT devices and infrastructure using a modern
-foundation designed with these concerns in mind.
+As the IoT grows, it faces the same problems that the larger Internet is struggling with: providing reliable
+services at scale in the face of malicious actors. Rust provides a language and ecosystem to build the next 
+generation of IoT devices and infrastructure with a modern foundation designed with these concerns in mind.
 
-# Topics
+# Topics &amp; Resources
 
 ## Environments
 
@@ -77,15 +80,13 @@ Endpoints (which send and receive data from the devices).
 
 # Contributing
 
-This site is a living document - it will evolve and grows as the Rust and IoT communities evolves and grows.
+This site is a living document - it will evolve and grow as the Rust and IoT communities evolves and grows.
 Contributions are welcome, either as Pull Requests or as Issues. 
 
 ## License
 
-This project is licensed under a Creative Commons Attribution 4.0 International License.
+This project is licensed under a Creative Commons [Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
-You should have received a copy of the [license](./LICENSE) along with this work. If not, see 
-[http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/)
-
+</div>
 </body>
 </html>
