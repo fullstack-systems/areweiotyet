@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>arewiotyet.org</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/main.css">
     <script src="./assets/main.js"></script>
 </head>
 <body>
-<h1>Is Rust IoT yet?</h1>
+<div class="container">
+<h1 class="hero">Is Rust IoT yet?</h1>
 <h2>What is Rust?</h2>
 <blockquote>
 <p><a href="https://www.rust-lang.org/en-US/">Rust</a> is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.</p>
@@ -18,19 +22,18 @@ and <a href="https://crates.io">crates.io</a>, the Rust community's central pack
 <blockquote>
 <p>The internet of things (IoT), is the internetworking of physical devices, vehicles (also referred to as &quot;connected devices&quot; and &quot;smart devices&quot;), buildings and other items embedded with electronics, software, sensors, actuators, and network connectivity that enable these objects to collect and exchange data. - <a href="https://en.wikipedia.org/wiki/Internet_of_things">Wikipedia</a></p>
 </blockquote>
-<p>For the purposes of this site, the IoT consists of several components: Devices which have processors, sensors
-and actuators, Protocols that specify how Devices communicate, and Infrastructure, which is used to build
-networked systems of these Devices.</p>
+<p>This site groups IoT components into three basic categories: <strong>devices</strong> which have processors, sensors
+and actuators, <strong>protocols</strong> that specify how devices communicate, and the <strong>infrastructure</strong> which
+connects the devices with the applications that use them.</p>
 <h2>Why is the IoT important to the Rust Community?</h2>
-<p>The IoT (including devices and infrastructure) is a fast growing application domain that presents
-a huge opportunity to expand the use of Rust. It's requirements (safety and security on often resource
-constrained networked devices) are a good match to the language and community's strengths.</p>
+<p>The IoT is a fast growing application domain that presents a huge opportunity to expand the use of Rust.
+It's requirements (particularly safety and security on often resource constrained networked devices) are a good match
+for the language and community's strengths.</p>
 <h2>Why is Rust important to the IoT Community?</h2>
-<p>As the IoT grows, it faces the same problems that the larger Internet is
-struggling with: providing reliable services at scale in the face of malicious actors. Rust provides
-a language and ecosystem to build the next generation of IoT devices and infrastructure using a modern
-foundation designed with these concerns in mind.</p>
-<h1>Topics</h1>
+<p>As the IoT grows, it faces the same problems that the larger Internet is struggling with: providing reliable
+services at scale in the face of malicious actors. Rust provides a language and ecosystem to build the next
+generation of IoT devices and infrastructure with a modern foundation designed with these concerns in mind.</p>
+<h1>Topics &amp; Resources</h1>
 <h2>Environments</h2>
 <p>Rust offers an impressive dynamic range: it is suitable for targeting a wide range of targets, from
 bare-metal single-chip, limited memory MCUs such as ARM and MIPS SoCs to Linux NUMA servers with hundreds
@@ -53,11 +56,10 @@ Endpoints (which send and receive data from the devices).</p>
 <h3>Middleboxes</h3>
 <h3>Endpoints</h3>
 <h1>Contributing</h1>
-<p>This site is a living document - it will evolve and grows as the Rust and IoT communities evolves and grows.
+<p>This site is a living document - it will evolve and grow as the Rust and IoT communities evolves and grows.
 Contributions are welcome, either as Pull Requests or as Issues.</p>
 <h2>License</h2>
-<p>This project is licensed under a Creative Commons Attribution 4.0 International License.</p>
-<p>You should have received a copy of the <a href="./LICENSE">license</a> along with this work. If not, see
-<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
+<p>This project is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International License</a>.</p>
+</div>
 </body>
 </html>

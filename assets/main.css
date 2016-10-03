@@ -1,8 +1,44 @@
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Fira Sans Light'), url("../fonts/FiraSans-Light.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fira Sans'), url("../fonts/FiraSans-Regular.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Fira Sans Medium'), url("../fonts/FiraSans-Medium.woff") format('woff');
+}
+
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero {
+    font-size: 48px;
 }
 
 h1 {
-    font-size: 48px;
-    text-align: center;
+    font-size: 36px;
+    margin: 48px 0 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d0d0d0;
+    
+}
+
+/* Media Overrides */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
 }
