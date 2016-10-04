@@ -313,7 +313,7 @@ Endpoints (which send and receive data from the devices).
 
 # Contributing
 
-This site is a living document - it will evolve and grow as the Rust and IoT communities evolves and grows.
+This site is a [living document](https://github.com/fullstack-systems/areweiotyet) - it will evolve and grow as the Rust and IoT communities evolves and grows.
 Contributions are welcome, either as Pull Requests or as Issues. 
 
 ## License
