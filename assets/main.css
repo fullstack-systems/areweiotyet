@@ -27,6 +27,10 @@ body {
     font-size: 48px;
 }
 
+p {
+    font-size: 16px;
+}
+
 h1 {
     font-size: 36px;
     margin: 48px 0 24px;
