@@ -320,3 +320,6 @@ CurveCP is similar to TCP but uses high-speed high-security elliptic-curve crypt
 
 https://ianix.com/pub/curve25519-deployment.html
 
+### Lots of notes on Embedded:
+
+https://www.reddit.com/r/rust/comments/4rhmqx/rust_and_armmbed_arduino_and_embedded_rust_in/
