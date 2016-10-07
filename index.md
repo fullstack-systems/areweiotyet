@@ -14,35 +14,104 @@
 
 <h1 class="hero">Is Rust IoT yet?</h1>
 
-## What is Rust?
+## Short Answer: Yes, it is.
 
-> [Rust](https://www.rust-lang.org/en-US/) is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. 
+You can use Rust to build IoT systems *today*. If you want to build IoT devices running
+Linux on a platform that Rust supports such as x86, ARM, or MIPS, it should be straightforward - 
+look below to get started. 
 
-In addition to the core Rust language, compiler and tools, Rust includes
-[Cargo](http://doc.crates.io/guide.html), a dependency management and build tool,
-and [crates.io](https://crates.io), the Rust community's central package host.
+If you want to target microcontrollers such as STM32 and Teensy or want to do bare-metal 
+development on powerful systems such as the Raspberry Pi or Beaglebone Black, things are
+moving fast and you will need to do much research and experimentation. 
 
-## What is the Internet of Things?
+## What is the IoT and why should I care?
 
-> The internet of things (IoT), is the internetworking of physical devices, vehicles (also referred to as "connected devices" and "smart devices"), buildings and other items embedded with electronics, software, sensors, actuators, and network connectivity that enable these objects to collect and exchange data. - [Wikipedia](https://en.wikipedia.org/wiki/Internet_of_things)
+The [Internet of Things](https://en.wikipedia.org/wiki/Internet_of_things) consists of 
+devices connected to the Internet that do stuff besides general computing. The hype around
+the IoT often emphasizes products that seem dubious (connected refrigerators and toasters),
+but the reality is that a huge number of devices doing really important things all over
+the world need to send data, get software updates, and be controlled remotely, and that
+number is growing quickly. Your future car, devices in your local hospital, and devices managing
+electrical grid all are part of the IoT.
 
-This site groups IoT components into three basic categories: **devices** which have processors, sensors
-and actuators, **protocols** that specify how devices communicate, and the **infrastructure** which 
-connects the devices with the applications that use them.
+Many of these devices will be deployed where they will be subject to attack by hackers 
+attempting to steal data, gain control, or even attack other people
+on the Internet. The quality of the software running on these devices will affect people's 
+daily lives, their privacy, their health and their personal safety.
 
-## Why is the IoT important to the Rust Community?
+Rust was designed exactly for this: to make it easier to write fast, safe, and correct
+software. It also has an active ecosystem that is focused on building
+robust tools and libraries using the best modern practices.
 
-The IoT is a fast growing application domain that presents a huge opportunity to expand the use of Rust. 
-It's requirements (particularly safety and security on often resource constrained networked devices) are a good match
-for the language and community's strengths.
+## Environments
 
-## Why is Rust important to the IoT Community?
+### Bare metal
 
-As the IoT grows, it faces the same problems that the larger Internet is struggling with: providing reliable
-services at scale in the face of malicious actors. Rust provides a language and ecosystem to build the next 
-generation of IoT devices and infrastructure with a modern foundation designed with these concerns in mind.
+The Rust compiler can build for several bare-metal targets such as ARM microcontrollers. 
+There is currently no low-level support for networking, so these devices may need to
+communicate through a more powerful gateway.  
 
+See [Embedded-Rust](http://github.com/japaric/embedded-rust/) for more discussion of Rust in 
+these embedded environments.
 
+### Linux
+
+Small, cheap single board computers such as the [Raspberry Pi](https://www.raspberrypi.org)
+and [BeagleBone Black](https://beagleboard.org/black) are very popular for IoT device development.
+These devices can run full Linux distributions such as [Raspbian](https://www.raspbian.org),
+or they can run customized installations by using tools such as [Yocto](https://www.yoctoproject.org)
+or [Buildroot](https://buildroot.org). It is also possible to do bare-metal development for
+these platforms with Rust, with the same limitations as above.
+
+## Protocols
+
+### General Web Protocols
+
+Many IoT devices communicate using HTTP, HTTP/2, WebSockets and other related protocols. See 
+[arewewebyet.org](http://www.arewewebyet.org) for a comprehensive guide to the Rust web related
+ecosystem, especially the [HTTP Clients](http://www.arewewebyet.org/topics/clients/) and 
+[Lower Web Stack](http://www.arewewebyet.org/topics/stack/) sections.
+
+### IoT Focused Protocols
+
+Rust has clients for many protocols commonly used in IoT systems, such as MQTT and CoAP.
+
+#### MQTT - [mqtt.org](http://mqtt.org)
+
+> MQTT is a Client Server publish/subscribe messaging transport protocol. It is light weight, open, simple, and designed so as to be easy to implement. These characteristics make it ideal for use in many situations, including constrained environments such as for communication in Machine to Machine (M2M) and Internet of Things (IoT) contexts where a small code footprint is required and/or network bandwidth is at a premium.
+
+Rust has several MQTT implementations: [mqtt-rs](https://github.com/zonyitoo/mqtt-rs), 
+[RuMqtt](https://github.com/Ather-Energy/RuMqtt), [rust-mq](https://github.com/inre/rust-mq),
+and [rust-mqtt](https://github.com/cubehub/rust-mqtt).
+
+#### CoAP - [coap.technology](http://coap.technology) 
+
+> The Constrained Application Protocol (CoAP) is a specialized web transfer protocol for use with constrained nodes and constrained networks in the Internet of Things. 
+The protocol is designed for machine-to-machine (M2M) applications such as smart energy and building automation.
+
+Rust currently has [coap-rs](https://github.com/Covertness/coap-rs), "A fast and stable Constrained Application Protocol(CoAP) library implemented in Rust."
+
+### Messaging Protocols
+
+IoT systems frequently use messaging protocols, either on device or to build scalable back-end systems.
+
+#### AMQP - [amqp.org](https://www.amqp.org)
+
+> The Advanced Message Queuing Protocol (AMQP) is an open standard for passing business messages between applications or organizations.  It connects systems, feeds business processes with the information they need and reliably transmits onward the instructions that achieve their goals.
+
+Rust currently has [rust-amqp](https://github.com/Antti/rust-amqp) 
+
+#### ZeroMQ - [zeromq.org](http://zeromq.org)
+
+> ZeroMQ (also known as ØMQ, 0MQ, or zmq) looks like an embeddable networking library but acts like a concurrency framework. It gives you sockets that carry atomic messages across various transports like in-process, inter-process, TCP, and multicast.
+
+Rust currently has [rust-zmq](https://github.com/erickt/rust-zmq)
+
+#### Kafka - [kafka.apache.org](https://kafka.apache.org)
+
+> Kafka is used for building real-time data pipelines and streaming apps. It is horizontally scalable, fault-tolerant, wicked fast, and runs in production in thousands of companies.
+
+Rust currently has [kafka-rust](https://github.com/spicavigo/kafka-rust).
 
 # Contributing
 

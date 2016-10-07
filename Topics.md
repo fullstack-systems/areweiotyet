@@ -215,6 +215,13 @@ IoT oriented general purpose protocols
 > The Constrained Application Protocol (CoAP) is a specialized web transfer protocol for use with constrained nodes and constrained networks in the Internet of Things. 
 The protocol is designed for machine-to-machine (M2M) applications such as smart energy and building automation.
 
+#### [STOMP](http://stomp.github.io)
+
+> STOMP is the Simple (or Streaming) Text Orientated Messaging Protocol.
+
+> STOMP provides an interoperable wire format so that STOMP clients can communicate with any STOMP message broker to provide easy and widespread messaging interoperability among many languages, platforms and brokers.
+
+
 #### [rosc](https://github.com/klingtnet/rosc) (OSC protocol library)
 
 > rosc is an implementation of the OSC 1.0 protocol in pure Rust.
